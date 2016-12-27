@@ -1,0 +1,15 @@
+@import "compass";
+@import "compass/reset";
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+.main-wrapper,
+.main-wrapper .main-header,
+.main-wrapper .main-footer,
+#main { width: 100%; }
+
+.main-sidebar,
+.main-content{
+  float: left;
+}

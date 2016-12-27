@@ -6,22 +6,22 @@
 
   <!-- css import -->
   <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <link rel="stylesheet" type="text/css" href="../css/admin-style.css">
   <!-- css import -->
 
   <!-- js import -->
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
   <!-- js import -->
 </head>
 <body>
 
-<div class="main-wrapper">
-  <header class="main-header">
+<div class="main-wrapper container-fluid">
+  <header class="main-header container-fluid">
     <div class="main-header-logo">logo</div>
     <div class="main-header-site"><a class="main-header-site-link">サイトを表示</a></div>
   </header>
-  <main id="main">
-    <aside class="main-sidebar">
+  <main id="main container-fluid row">
+    <aside class="main-sidebar col-sm-2">
       <ul class="main-menu">
         <li class="main-menu-item"><a class="main-menu-item-link">ホーム</a></li>
         <li class="main-menu-item main-menu-item-including-sub-menu">
@@ -65,11 +65,11 @@
         </li>
       </ul>
     </aside>
-    <div class="main-content">
+    <div class="main-content col-sm-10">
 
     </div>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer container-fluid">
     <div class="main-footer-copyright">Kyuacare&copy;2017</div>
   </footer>
 </div>

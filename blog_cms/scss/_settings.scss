@@ -1,0 +1,41 @@
+// window extra small(最小メディアクエリ)
+$window_es_size_to: "only screen and (max-width: 544px)";
+
+// window small
+$window_sm_size_from_to: "only screen and (min-width: 545px) and (max-width: 576px)";
+$window_sm_size_to: "only screen and (max-width: 576px)";
+$window_sm_size_from: "only screen and (min-width: 545px)";
+
+// window medium
+$window_md_size_from_to: "only screen and (min-width: 577px) and (max-width: 720px)";
+$window_md_size_to: "only screen and (max-width: 720px)";
+$window_md_size_from: "only screen and (min-width: 577px)";
+
+// window large
+$window_lg_size_from_to: "only screen and (min-width: 721px) and (max-width: 940px)";
+$window_lg_size_to: "only screen and (max-width: 940px)";
+$window_lg_size_from: "only screen and (min-width: 721px)";
+
+// window extra large
+$window_el_size_from: "only screen and (min-width: 941px)";
+
+// admin theme color
+$admin_theme_color: #23282d;
+$admin_theme_font_color: #f1f1f1;
+
+// front theme color
+$front_theme_color: #000;
+$front_theme_font_color: #FFF;
+
+$col-1: 8.333333333333332%;
+$col-2: 16.666666666666664%;
+$col-3: 25%;
+$col-4: 33.33333333333333%;
+$col-5: 41.66666666666667%;
+$col-6: 50%;
+$col-7: 58.333333333333336%;
+$col-8: 66.66666666666666%;
+$col-9: 75%;
+$col-10: 83.33333333333334%;
+$col-11: 91.66666666666666%;
+$col-12: 100%;

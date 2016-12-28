@@ -10,8 +10,8 @@
   <!-- css import -->
 
   <!-- js import -->
-  <script src="../js/tinymce/tinymce.min.js"></script>
-  <script>
+  <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
+  <script type="text/javascript">
   // ファイルブラウザが開かれる時に呼び出される関数
   // https://github.com/Studio-42/elFinder/wiki/Integration-with-TinyMCE-4.x を一部変更しています。
   function elFinderBrowser (field_name, url, type, win) {
@@ -47,67 +47,81 @@
 </head>
 <body>
 
-<div class="main-wrapper container-fluid">
-  <header class="main-header container-fluid">
-    <div class="main-header-logo">logo</div>
-    <div class="main-header-site"><a class="main-header-site-link">サイトを表示</a></div>
+<div class="main-wrapper contener-full">
+  <header class="main-header">
+    <div class="position-top-fixed row pie-clear-fix">
+      <div class="main-header-logo col-md-1">logo</div>
+      <div class="main-header-site col-md-1"><a class="main-header-site-link"><div class="main-header-site-link-name">サイトを表示</div></a>
+    </div>
   </header>
-  <main id="main container-fluid row">
-    <aside class="main-sidebar col-sm-2">
+  <main id="main" class="row pie-clear-fix">
+    <aside class="main-sidebar col-md-2">
       <ul class="main-menu">
-        <li class="main-menu-item"><a class="main-menu-item-link">ホーム</a></li>
+        <li class="main-menu-item"><a class="main-menu-item-link"><div class="main-menu-item-link-name">ホーム</div></a></li>
+        <li class="main-menu-item main-menu-item-including-sub-menu now">
+          <a class="main-menu-item-link"><div class="main-menu-item-link-name">ブログ</div></a>
+          <ul class="main-menu-item-inner-sub-menu">
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">一覧</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">新規投稿</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">カテゴリー</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">タグ</div></a></li>
+          </ul>
+        </li>
         <li class="main-menu-item main-menu-item-including-sub-menu">
-          <a class="main-menu-item-link">ブログ</a>
+          <a class="main-menu-item-link"><div class="main-menu-item-link-name">ニュース</div></a>
           <ul class="main-menu-item-inner-sub-menu">
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">一覧</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">新規投稿</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">カテゴリー</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">タグ</a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">一覧</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">新規記事</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">カテゴリー</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">タグ</div></a></li>
           </ul>
         </li>
-        <li class="main-menu-item">
-          <a class="main-menu-item-link">ニュース</a>
+        <li class="main-menu-item main-menu-item-including-sub-menu">
+          <a class="main-menu-item-link"><div class="main-menu-item-link-name">メディア</div></a>
           <ul class="main-menu-item-inner-sub-menu">
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">一覧</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">新規記事</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">カテゴリー</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">タグ</a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">画像</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">その他</div></a></li>
           </ul>
         </li>
-        <li class="main-menu-item">
-          <a class="main-menu-item-link">メディア</a>
+        <li class="main-menu-item main-menu-item-including-sub-menu">
+          <a class="main-menu-item-link"><div class="main-menu-item-link-name">固定ページ</div></a>
           <ul class="main-menu-item-inner-sub-menu">
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">画像</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">その他</a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">一覧</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">新規投稿</div></a></li>
           </ul>
         </li>
-        <li class="main-menu-item">
-          <a class="main-menu-item-link">固定ページ</a>
+        <li class="main-menu-item main-menu-item-including-sub-menu">
+          <a class="main-menu-item-link"><div class="main-menu-item-link-name">設定</div></a>
           <ul class="main-menu-item-inner-sub-menu">
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">一覧</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">新規投稿</a></li>
-          </ul>
-        </li>
-        <li class="main-menu-item">
-          <a class="main-menu-item-link">設定</a>
-          <ul class="main-menu-item-inner-sub-menu">
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">簡易設定</a></li>
-            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link">詳細設定</a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">簡易設定</div></a></li>
+            <li class="main-menu-item-inner-sub-menu-item"><a class="main-menu-item-inner-sub-menu-item-link"><div class="main-menu-item-inner-sub-menu-item-link-name">詳細設定</div></a></li>
           </ul>
         </li>
       </ul>
     </aside>
-    <div class="main-content col-sm-10">
+    <div class="main-content col-md-10 col-md-2-offset">
       <form method="post" action="./test.php">
         <textarea id="foo" name="foo">最初に入力しておきたい文章</textarea>
         <input type="submit" value="送信" />
       </form>
     </div>
   </main>
-  <footer class="main-footer container-fluid">
+  <footer class="main-footer contener-full">
     <div class="main-footer-copyright">Kyuacare&copy;2017</div>
   </footer>
 </div>
+
+<script type="text/javascript">
+   var including_submenu = document.querySelectorAll('.main-menu-item-including-sub-menu');
+   for(var i=0; i<including_submenu.length; i++){
+     including_submenu[i].addEventListener('mouseover', function(){
+       console.log('hover');
+     }, false);
+     including_submenu[i].addEventListener('mouseout', function(){
+       console.log('leave');
+     }, false);
+   }
+</script>
 
 </body>
 </html>

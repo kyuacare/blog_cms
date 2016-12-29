@@ -1,0 +1,153 @@
+@import "compass";
+@import "_settings";
+@import "imports/_reset";
+@import "imports/_class-parts";
+
+@import "imports/_admin-edit";
+
+.main-wrapper,
+.main-wrapper .main-header,
+.main-wrapper .main-footer,
+#main { width: 100%; }
+
+.main-header {
+  height: 30px;
+  background-color: $admin_theme_color;
+  color: invert($admin_theme_color);
+
+  .position-top-fixed {
+    height: 30px;
+    background-color: $admin_theme_color;
+
+    .main-header-site { min-width: 120px;}
+    .main-header-site-link { display:block; }
+    .main-header-logo,.main-header-site-link-name {
+      font-size: 1.4rem;
+      line-height: 18px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-weight: bold;
+    }
+  }
+}
+
+#main {
+ position: relative;
+}
+
+.main-sidebar {
+  background-color: $admin_theme_color;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  padding: 0;
+}
+.main-menu .main-menu-item {
+  min-height: 35px;
+  color: invert($admin_theme_color);
+  padding:0 0 0 15px;
+  position: relative;
+
+  .main-menu-item-inner-sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 120px;
+
+    .main-menu-item-inner-sub-menu-item {
+      padding-left: 15px;
+    }
+
+    .main-menu-item-inner-sub-menu-item-link-name{
+      font-size: 1.4rem;
+      line-height: 18px;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+  }
+
+  &:hover{
+    background-color: darken($admin_theme_color, 50%);
+    color: darken(invert($admin_theme_color), 50%);
+  }
+
+  &.main-menu-item-including-sub-menu:hover{
+
+    &:after{
+      right: 0px;
+      border: 8px solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-right-color: lighten($admin_theme_color, 15%);
+      top: 50%;
+      margin-top: -8px;
+    }
+    .main-menu-item-inner-sub-menu {
+      display: block;
+      z-index: 9999;
+      background-color: lighten($admin_theme_color, 15%);
+      color: lighten(invert($admin_theme_color), 50%);
+    }
+  }
+
+  &.now{
+    background-color: lighten($admin_theme_color, 50%);
+    color: lighten(invert($admin_theme_color), 50%);
+
+    &:hover .main-menu-item-inner-sub-menu{
+      background-color: lighten($admin_theme_color, 50%);
+      color: lighten(invert($admin_theme_color), 50%);
+      z-index: auto;
+      max-width: 100%;
+      min-width: auto;
+    }
+
+    .main-menu-item-inner-sub-menu{
+      display: block;
+      position: relative;
+      left:0;
+      top:0;
+      max-width: 100%;
+      min-width: auto;
+    }
+  }
+  .main-menu-item-link {
+    display: block;
+    position: relative;
+
+    .main-menu-item-link-name {
+      font-size: 1.4rem;
+      line-height: 18px;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.main-content {
+  min-height: 800px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: lighten($admin_theme_color, 80%);
+  font-size: 1.3rem;
+
+  .cms-menu-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.main-footer {
+  min-height: 30px;
+  text-align: center;
+  padding: 8 0px;
+  background-color: $admin_theme_color;
+  color: invert($admin_theme_color);
+}
